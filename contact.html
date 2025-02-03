@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Casino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+            <img src="images/8274015.png" alt="casino logo" class="logo-img">
+            <nav>
+                <div class="logo">გთხოვ დამატრიალე</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="return validateContactForm()">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="contact-error-message" style="color:red; display:none;">Please fill in all fields correctly.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; შპს რულეტკა</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
