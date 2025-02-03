@@ -8,7 +8,11 @@ document.getElementById('balance').textContent = balance;
 const slotSymbols = ['🍒', '🍉', '🍋', '🍊', '🍓', '🍇', '🍊', '🍍', '🍒'];
 
 document.getElementById('spinSlotButton').addEventListener('click', function() {
-    playSlotGame();
+    if (balance > 0) {
+        playSlotGame();
+    } else {
+        alert("You don't have enough points to play. Please add points.");
+    }
 });
 
 function playSlotGame() {
@@ -47,11 +51,19 @@ const betRedButton = document.getElementById('betRedButton');
 const betBlackButton = document.getElementById('betBlackButton');
 
 betRedButton.addEventListener('click', function() {
-    playRoulette('red');
+    if (balance > 0) {
+        playRoulette('red');
+    } else {
+        alert("You don't have enough points to play. Please add points.");
+    }
 });
 
 betBlackButton.addEventListener('click', function() {
-    playRoulette('black');
+    if (balance > 0) {
+        playRoulette('black');
+    } else {
+        alert("You don't have enough points to play. Please add points.");
+    }
 });
 
 function playRoulette(betColor) {
